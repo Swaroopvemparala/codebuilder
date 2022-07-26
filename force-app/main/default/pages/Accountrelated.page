@@ -1,0 +1,19 @@
+<apex:page lightningStylesheets="true" controller="Accountrelatedlist">
+    <apex:form >
+        <apex:pageBlock title="Account Related Records">
+                <centre>
+                <apex:inputCheckbox value="{!chckbox}"/>
+                    <apex:commandButton value="Display" action="{!save}"/></centre>
+                <apex:pageBlockTable value="{!acc}" var="a">
+                    <apex:column value="{!a.Name}"/>
+                    <apex:column value="{!a.AnnualRevenue}"/>
+                    <apex:repeat value="{!a.opportunities}" var="op">
+                    <apex:column value="{!op.Amount}" headerValue="Salary"/>
+                    <apex:column value="{!op.ExpectedRevenue}"/></apex:repeat>
+                    <apex:repeat value="{!a.contacts}" var="co">
+                    <apex:column value="{!co.MobilePhone}"/>
+                    <apex:column value="{!co.acc_website__c}"/></apex:repeat>
+                </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

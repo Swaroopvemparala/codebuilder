@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="result" type="Integer" access="public"/>
+    <aura:handler event="c:ResultEvent" action="{!c.displayResult}"/>
+    <lightning:card title="Diff of numbers" iconName="standard:outcome">
+        <div class="slds-var-p-around_small">
+            Difference of 2 numbers:{!v.result}           
+        </div>
+    </lightning:card>	
+</aura:component>

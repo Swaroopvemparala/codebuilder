@@ -1,0 +1,14 @@
+<apex:page controller="PracticePppd" lightningStylesheets="true">
+    <apex:form >
+        <center><apex:pageBlock title="Insert a Record">
+            Name:<apex:inputText value="{!Name}"/>
+            Phone:<apex:inputText value="{!Phone}"/>
+            Account Number:<apex:inputText value="{!AccountNumber}"/>
+            Industry:<apex:inputText value="{!Industry}"/>
+            Annual Revenue:<apex:inputText value="{!AnnualRevenue}"/><br/><br/>
+            <apex:commandButton value="Update Record" action="{!updateRecord}"/>
+            <apex:outputText value="{!outputMessage}">
+            </apex:outputText>
+            </apex:pageBlock></center>
+    </apex:form>
+</apex:page>

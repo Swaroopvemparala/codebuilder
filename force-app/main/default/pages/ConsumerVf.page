@@ -1,0 +1,15 @@
+<apex:page controller="ConsumerApi" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Account Details">
+            <apex:commandButton value="Get Records" action="{!displayAttributes}"/>
+            <center><apex:pageBlockTable value="{!acc}" var="c">
+                <apex:column value="{!c.Id}" headervalue="Id"/>
+                <apex:column value="{!c.Name}" headervalue="Name"/>
+                <apex:column value="{!c.Phone}" headervalue="Phone"/>
+                <apex:column value="{!c.AccountNumber}" headervalue="AccountNumber"/>
+                <apex:column value="{!c.Industry}" headervalue="Industry"/>
+                <apex:column value="{!c.AnnualRevenue}" headervalue="AnnualRevenue"/>
+                </apex:pageBlockTable></center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

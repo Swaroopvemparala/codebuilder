@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="fn" type="Integer"/>
+    <aura:attribute name="sn" type="Integer"/>
+    <aura:registerEvent name="appEvent" type="c:ResultEvent"/>
+    <lightning:card title="Enter two values" iconName="standard:outcome">
+        <div class="slds-var-p-around_small">
+            <lightning:input label="Fno" value="{!v.fn}" type="number" style="width:15rem"/><br/>
+            <lightning:input label="Sno" value="{!v.sn}" type="number" style="width:15rem"/><br/>
+            <lightning:button label="Add" variant="brand" onclick="{!c.addition}"/>
+            <lightning:button label="Sub" variant="brand" onclick="{!c.subtract}"/>
+        </div>
+    </lightning:card>	
+</aura:component>

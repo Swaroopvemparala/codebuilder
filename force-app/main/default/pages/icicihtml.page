@@ -1,0 +1,164 @@
+<apex:page lightningStylesheets="true">
+    <style>
+        nav{
+flex: 1;
+text-align: center;
+color: black;
+padding: 8px 20px;
+background-color: #fdf6f4;
+margin-left: -10px;
+}
+        nav ul{
+	text-align: center;
+display: inline;
+list-style: none;
+}
+        nav ul li{
+	text-align: center;
+display: inline;
+margin-right: 20px;
+}
+    </style>
+    <apex:form >
+        <table border="1" width="100%">
+            <tr>
+                <td style="padding-left: 30px">
+                    <apex:image url="https://www.icicibank.com/assets/images/img/logo.png"/>
+                    <input type="button" value="PERSONAL +" style="padding:10px 15px; border:none; background-color: #ebe7e7; border-radius: 10px"/>
+                    <input type="button" value="NRI" style="padding:10px 15px; border:none; background-color: #ebe7e7; border-radius: 10px"/>
+                    <input type="button" value="BUSINESS +" style="padding:10px 15px; border:none; background-color: #ebe7e7; border-radius: 10px"/>
+                    <input type="button" value="CORPORATE" style="padding:10px 15px; border:none; background-color: #ebe7e7; border-radius: 10px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:image url="https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg" alt="" style="width: 25px; padding-right: -500px;"/>
+                    <input type="button" value="PERSONAL" style="border-color: #f37e20; border-radius: 50px;background-color: white;padding: 7px 30px; color: #f37e20;"/>
+                    <input type="button" value="LOGIN" style="border-color:#f37e20; border-radius: 50px;background-color:orange;padding: 7px 30px; color: white"/>
+                    <input type="button" value="NEW USER" style="border-color: #f37e20; border-radius: 50px;background-color: white;padding: 7px 30px; color: #f37e20;"/>
+                    <apex:image url="https://www.icicibank.com/assets/images/icons/notification-animation.png"/>
+                    <input type="text" name="Search" placeholder="Search for products, services.." style="border-color: black; border-radius: 50px; background-color: white;padding: 10px 350px; padding-left: 20px; background-color: #feeed3!important;padding-top:10px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:image url="https://www.icicibank.com/assets/images/icons/doAnythingCampaign.svg" style="width:40px"/>
+                    <apex:image url="https://www.icicibank.com/assets/images/icons/imobile.svg"/>
+                    <apex:image url="https://www.icicibank.com/assets/images/icons/digital-banking.svg"/>&nbsp;&nbsp;&nbsp;
+                    <span>Help n Contact</span>
+                </td>
+            </tr>
+        </table>
+        <table border="0" width="100%">
+	<tr>
+		<td>
+			<nav >
+	<ul>
+        <li><apex:image url="https://www.icicibank.com/assets/images/icons/bank-icon-o.svg" width="23px" /></li>
+		
+		<li><span>ACCOUNTS | </span></li>
+        <li><apex:image url="https://www.icicibank.com/assets/images/icons/card-icon-o.svg" width="23px" /></li>
+		<li><span>CARDS |  
+			</span></li>
+        <li><apex:image url="https://www.icicibank.com/assets/images/icons/loan-icon-o.svg" width="23px" /></li>
+		<li><span>LOANS | 
+			</span></li>
+        <li><apex:image url="https://www.icicibank.com/assets/images/icons/invest-icon-o.svg" width="23px" /></li>
+		<li><span>INVEST | 
+			</span></li>
+        <li><apex:image url="https://www.icicibank.com/assets/images/icons/insure-icon-o.svg" width="23px" /></li>
+         <li><span>INSURE | 
+			</span></li>
+        <li><apex:image url="https://www.icicibank.com/assets/images/icons/pay-icon-o.svg" width="23px" /></li>
+			<li><span>PAY | </span></li>
+        <li><apex:image url="https://www.icicibank.com/assets/images/icons/offers_maroon.svg" width="23px" /></li>
+			<li><span>OFFERS</span></li>
+	</ul>
+</nav>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table style="background-image: url(https://www.icicibank.com/managed-assets/images/personal/home-page-banners/Desktop/dream-about-it-own-d.jpg);" width="100%">
+				<tr>
+					<td>
+						<table border="0" style="background-color: white; border-radius: 20px; margin-top: 200px; padding: 30px 50px;">
+							<tr>
+								<td colspan="4">
+									<b>OFFERS FOR YOU</b>OFFERS FOR YOU
+								</td>
+							</tr>
+							<tr>
+								<td>
+                                    <apex:image url="https://www.icicibank.com/assets/images/icons/creditcard-icon.png"/>		
+								</td>
+								<td>
+                                    <b>Savings Account</b><br/>
+                                    <span>Open Insta Account in 4 Minutes</span><br/>
+									<span style="color: #f37e20; font-size: 15px;">OPEN NOW >> </span>
+								</td>
+								<td>
+                                    <apex:image url="https://www.icicibank.com/assets/images/icons/homeloan-icon.png"/>
+									
+								</td>
+								<td>
+                                    <b>Home Loan</b><br/>
+                                    <span>Instant Sanction Starting at just 6.70%</span><br/>
+									<span style="color: #f37e20; font-size: 15px;">AVAIL HOME LOAN >> </span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+                                    <apex:image url="https://www.icicibank.com/assets/images/icons/creditcard-icon.png"/>
+								</td>
+								<td>
+                                    <b>Credit Card</b><br/>
+                                    <span>Get The Right card for You</span><br/>
+									<span style="color: #f37e20; font-size: 15px;">Get credit card, Instantly >> </span>
+								</td>
+								<td>
+                                    <apex:image url="https://www.icicibank.com/assets/images/icons/personal-loan-icon.png"/>
+								</td>
+								<td>
+                                    <b>Personal Loan</b><br/>
+                                    <span>For all your Needs, upto 25 Lakh</span><br/>
+									<span style="color: #f37e20; font-size: 15px;">AVAIL PERSONAL LOAN >> </span>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table border="0" style="background-color: white; border-radius: 20px; margin-top: 200px; padding: 30px 50px; margin-right: 350px;">
+							<tr>
+								<td colspan="2" style="padding-left:20px">
+									<b>Grow your Investment</b>
+								</td>
+							</tr>
+							<tr>
+								<td style="align-items: center;">
+                                    <apex:image url="https://www.icicibank.com/assets/images/icons/cc-icon.png" style="padding-left:20px"/><br/>
+									<span>Fixed Deposit</span>
+								</td>
+								<td>
+                                    <apex:image url="https://www.icicibank.com/assets/images/icons/mf-icon.png" style="padding-left:30px"/><br/>
+									<span style="padding-left:20px">Mutual Fund</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+                                    <apex:image url="https://www.icicibank.com/assets/images/icons/iWish-icon.png" style="padding-left:20px"/><br/>
+									<span style="padding-left:20px">iWish</span>
+								</td>
+								<td>
+                                    <apex:image url="https://www.icicibank.com/assets/images/icons/rd-icon.png" style="padding-left:30px"/><br/>
+									<span>Recurring Deposit</span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<aura:component>
+    <aura:attribute name="chValue1" type="String"/>
+    <aura:attribute name="chValue2" type="String"/>
+    <aura:attribute name="chValue3" type="String"/>
+	<lightning:card title="P2C Child" iconName="standard:budget">
+        <div class="slds-p-left_medium" style="color:red;font-size:20px">
+            <p style="color:red;font-size:20px">{!v.chValue1}</p>
+            <p style="color:blue;font-size:20px">{!v.chValue2}</p>
+            <p style="color:green;font-size:20px">{!v.chValue3}</p>
+        </div>
+    </lightning:card>
+</aura:component>

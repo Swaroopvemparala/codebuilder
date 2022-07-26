@@ -1,0 +1,19 @@
+<apex:page controller="DisplayRecords">
+    <apex:form >
+        <apex:pageBlock title="Employee Records" tabStyle="Employee__c">
+            <center>
+                Emp Name&nbsp;&nbsp;<apex:inputText value="{!enm}"/>&nbsp;&nbsp;
+            	<apex:commandButton value="Select Records" action="{!displayRecords}"/>
+                <br/><br/>
+                Count&nbsp;&nbsp;<apex:outputText value="{!count}"></apex:outputText>
+                <apex:pageBlockTable value="{!em}" var="e">
+                    <apex:column value="{!e.Id}"/>
+                    <apex:column value="{!e.Name}"/>
+                    <apex:column value="{!e.First_Name__c}"/>
+                    <apex:column value="{!e.Mobile__c}"/>
+                    <apex:column value="{!e.Email__c}"/>
+                </apex:pageBlockTable>
+            </center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

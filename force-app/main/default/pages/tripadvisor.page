@@ -1,0 +1,59 @@
+<apex:page lightningStylesheets="true">
+    <apex:form >
+        <table border="0" width="100%">
+            <tr>
+                <td style="padding-left: 30px">
+                    <apex:image url="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" width="120px" style="margin-top:20px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="search" style="border-color:lightgray;border-radius: 50px;background-color:white;padding:2px 80px;margin-top:20px"/>
+                    <span style="margin-left:550px;"><apex:image url="http://simpleicon.com/wp-content/uploads/pencil.png" width="15px"/></span>
+                    <span style="padding-left:1px"><b>Review</b></span>&nbsp;&nbsp;&nbsp;
+                    <span><apex:image url="https://www.kindpng.com/picc/m/169-1694281_heart-symbol-computer-icons-heart-icon-instagram-png.png" width="15px"/></span>
+                    <span style="padding-left:1px"><b>Trips</b></span>&nbsp;&nbsp;&nbsp;
+                    <span><apex:image url="https://static.vecteezy.com/system/resources/previews/001/505/138/large_2x/notification-bell-icon-free-vector.jpg" width="15px"/></span>
+                    <span style="padding-left:1px"><b>Alert</b></span>&nbsp;&nbsp;
+                    <input type="button" name="sign in" value="Sign in" style="border-color:black;border-radius:50px;background-color:black;color:white;"/>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <table border="0">
+            <tr>
+                <td style="padding-left: 40px">
+                    <span><b>Hotels</b></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span><b>Things to do</b></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span><b>Restaurants</b></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span><b>Flights</b></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span><b>Holiday Homes</b></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span><b>Package Holidays</b></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span><b>....</b></span>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <table border="0" style="background-image: url(https://static.tacdn.com/img2/brand/home/homemar2022_dt_trans.webp);background-repeat:no-repeat;margin-left: 100px;bimage-width:1600px" width="1300px" height="300px">
+            <tr>
+                <td>
+                    <table border="0" style="margin:-100px 0px">
+                        <tr>
+                            <td>
+                                <span style="color:black;font-size:20px;padding-left:400px;"><b>Latest reviews. Lowest Prices.</b></span>
+                            </td>
+                        </tr><br/>
+                        <tr>
+                            <td>
+                                <input type="text" name="search" placeholder="Hotel Name or Destination" style="border-color:black;border-bottom-right-radius:20px;border-bottom-left-radius:20px;margin-left: 100px;padding:0px 150px"/>
+                           <input type="text" name="cal" placeholder="Check In--- Check Out" style="margin:-5px;padding:0px 20px"/>
+	                       <apex:selectList style="padding:5px 0px; margin:-0.5px" size="1">
+                               <apex:selectOption itemLabel="1 room, 2 Guests" itemValue="rooms"></apex:selectOption>
+                               <apex:selectOption itemLabel="2 room, 3 Guests" itemValue="rooms"></apex:selectOption>
+                                </apex:selectList>
+                                <span style="border-top-right-radius: 20px;border-bottom-right-radius: 20px; background-color:green;color:white;padding:7px 5px;margin:-5px"> Find hotels</span>
+                            </td>
+                                
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </apex:form>
+</apex:page>

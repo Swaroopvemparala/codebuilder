@@ -1,0 +1,26 @@
+<apex:page controller="AccountPaginationController" setup="false" sidebar="false" showheader="true">
+    <apex:sectionHeader title="Pagination-Account" subtitle="Accounts Pagination"/>
+	<apex:form >
+		<apex:pageblock title="Accounts PageBlock" id="pgBlock">
+		<apex:pageBlockTable value="{!Accounts}" var="acc">
+		<apex:column headerValue="Account Name">
+		<apex:outputLink value="/{!acc.id}" target="_blank">{!acc.name}</apex:outputLink>
+		</apex:column>
+		<apex:column value="{!acc.Rating}"/>
+		<apex:column value="{!acc.industry}"/>
+		<apex:column value="{!acc.AnnualRevenue}"/>
+		<apex:column value="{!acc.Type}"/>
+		<apex:column value="{!acc.Phone}"/>
+		<apex:column value="{!acc.Fax}"/>
+		<apex:column value="{!acc.Active__c}"/>
+	</apex:pageBlockTable>
+	<center>
+		<apex:outputtext > Of {!controller.resultsize} </apex:outputtext> &nbsp;&nbsp;
+		<apex:commandLink value="First" action="{!controller.First}" rerender="pgBlock" rendered="{! controller.hasPrevious}"/> &nbsp;&nbsp;
+		<apex:commandlink value="Previous" action="{!controller.Previous}" rerender="pgBlock" rendered="{!controller.hasPrevious}"/> &nbsp;&nbsp;
+		<apex:commandLink value="Next" action="{!controller.Next}" rerender="pgBlock" rendered="{!controller.hasNext}"/> &nbsp;&nbsp;
+		<apex:commandLink value="Last" action="{!controller.last}" rerender="pgBlock" rendered="{!controller.hasNext}"/>
+	</center>
+	</apex:pageblock>
+		</apex:form>
+	</apex:page>

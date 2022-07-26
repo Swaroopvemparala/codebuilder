@@ -1,0 +1,13 @@
+<apex:page controller="CustomApi" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Get Employee Records">
+            <apex:commandButton value="Get Records" action="{!displayResult}"/>
+            <apex:pageBlockTable value="{!cw}" var="c">
+                <apex:column value="{!c.Id}" headerValue="Id"/>
+                <apex:column value="{!c.Empn}" headerValue="Employee Name"/>
+                <apex:column value="{!c.Gen}" headerValue="Gender"/>
+                <apex:column value="{!c.Mob}" headerValue="Mobile Number"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page controller="WeatherApi" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Weather Report">
+            <apex:inputText value="{!cname}" /><br/><br/>
+        <apex:commandButton action="{!tempe}" value="what is the temperature? "/><br/>
+            <center><apex:outputText value="{!temperature}"></apex:outputText></center>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

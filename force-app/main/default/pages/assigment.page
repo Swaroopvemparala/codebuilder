@@ -1,0 +1,20 @@
+<apex:page lightningStylesheets="true" controller="assignment">
+    <apex:form >
+        <apex:pageBlock title="Records">
+            <center>
+            Select Gender to Display Records &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:selectRadio value="{!gender}">
+                <apex:selectOption itemLabel="Male" itemvalue="male"/>
+                <apex:selectOption itemLabel="Female" itemValue="Female"/>
+            </apex:selectRadio>
+            <apex:commandButton action="{!search}"  value="Display Records"/>
+            </center>
+            <apex:pageBlockTable value="{!disp}" var="d">
+                <apex:column value="{!d.Name}"/>
+                <apex:column value="{!d.First_Name__c}"/>
+                <apex:column value="{!d.Mobile__c}"/>
+                <apex:column value="{!d.Gender__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

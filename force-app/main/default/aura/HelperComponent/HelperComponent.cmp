@@ -1,0 +1,12 @@
+<aura:component controller="HelperComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="nm" type="string"/>
+    <lightning:card title="Helper Method" iconName="utility:activity" >
+        <div class="slds-var-p-around_small">
+        <lightning:input style="width:15rem" label="Enter Name" value="{!v.nm}"/><br/>
+        <lightning:button label="submit1" variant="brand" onclick="{!c.submitmethod1}"/>
+        <lightning:button label="submit2" variant="brand" onclick="{!c.submitmethod2}"/>
+        <lightning:button label="submit3" variant="brand" onclick="{!c.submitmethod3}"/>
+            </div>
+    </lightning:card>
+	
+</aura:component>

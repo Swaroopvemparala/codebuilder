@@ -1,0 +1,33 @@
+<apex:page lightningStylesheets="true"  docType="html-5.0">
+    <apex:form style="background-color:lightblue;  background-size:100% 100%; padding:190px 100px">
+        <apex:pageBlock >
+            <apex:tabPanel switchType="client" >
+                <apex:tab label="Account" style="background-color:lightgray;">
+                    <apex:pageBlockSection columns="1" >
+                        <apex:outputText title="Name" label="Name"></apex:outputText><br/>
+                        <apex:outputText title="phone" label="Phone"></apex:outputText><br/>
+                        <apex:outputText title="type" label="type"></apex:outputText><br/>
+                        <apex:outputText title="Industry" label="Industry"></apex:outputText>
+                    </apex:pageBlockSection>
+                    
+                </apex:tab>
+                
+                <apex:tab label="Contact" style="background-color:Lightgray;">
+                    <apex:pageBlockSection columns="1">
+                        <apex:outputText title="Name" label="FirstName"></apex:outputText><br/>
+                        <apex:outputText title="Name" label="LastName"></apex:outputText><br/>
+                        <apex:outputText title="Name" label="Phone"></apex:outputText><br/>
+                        <apex:outputText title="Name" label="Email"></apex:outputText>
+                    </apex:pageBlockSection>
+                </apex:tab>
+                <apex:tab label="Opportunity" style="background-color:lightgray;">
+                <apex:pageBlockSection columns="1">
+                    <apex:outputText label="Opportunity Name"></apex:outputText><br/>
+                    <apex:outputText label="Phone"></apex:outputText><br/>
+                    <apex:outputText label="Address"></apex:outputText><br/>
+                    </apex:pageBlockSection>
+                </apex:tab>
+            </apex:tabPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

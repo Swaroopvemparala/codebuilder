@@ -1,0 +1,8 @@
+<apex:page controller="EmpInsert">
+    <apex:form >
+        Name<apex:inputText value="{!enm}"/><br/><br/>
+        Salary<apex:inputText value="{!esl}"/><br/><br/>
+        Email<apex:inputText value="{!eml}"/><br/><br/>
+        <apex:commandButton value="save" action="{!insertRecord}"/>
+    </apex:form>
+</apex:page>

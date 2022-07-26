@@ -1,0 +1,56 @@
+<apex:page controller="VFBasics">
+    <apex:form >
+        <apex:pageBlock title="Basic Tasks">
+            <apex:pageBlockSection collapsible="true" title="Greetings" columns="1">
+                <apex:inputText label="Please enter your Name" value="{!string1}" html-placeholder="Enter Name"/>
+                <apex:commandButton value="Submit" action="{!Submit}"/>
+                <apex:commandButton value="Check the Name is Palindrome" action="{!Palindrome}"/>
+                <apex:commandButton value="Length of Name" action="{!Length}"/>
+                <apex:outputText label="Output:" value="{!string2}">
+                </apex:outputText>
+            </apex:pageBlockSection>
+            <br/>
+            <apex:pageBlockSection collapsible="true" title="Numbers" columns="1">
+                <apex:inputText label="Value 1" value="{!integer1}" html-placeholder="Enter Number"/>
+                <apex:inputText label="Value 2" value="{!integer2}" html-placeholder="Enter Number"/>
+                <apex:inputText label="value 3" value="{!integer3}" html-placeholder="Enter Number"/>
+                <apex:commandButton value="Sum of Numbers" action="{!Add}"/>
+                <apex:commandButton value="Multiple of Numbers" action="{!Multiply}"/>
+                <apex:commandButton value="Average of Numbers" action="{!Average}"/>
+                <apex:commandButton value="Greatest of given Numbers" action="{!Greatest}"/>
+                <apex:outputText label="Output:" value="{!integer4}">
+                </apex:outputText>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection collapsible="true" title="EmployeeDetails" columns="1">
+                <apex:inputText label="Employee Name" value="{!Name}"/>
+                <apex:inputText label="Salary" value="{!Salary}"/>
+                <apex:inputText label="Experience" value="{!Experience}"/>
+                <apex:commandButton value="click" action="{!click}"/>
+                <apex:outputText label="Output:" value="{!Output1}"></apex:outputText>
+            </apex:pageBlockSection>
+            <br/>
+            <apex:pageBlockSection collapsible="true" title="Student Details" columns="1">
+                <apex:inputText label="Student Name" value="{!StudentName}"/>
+                <apex:inputText label="age" value="{!age}"/>
+                <apex:inputText label="Branch" value="{!branch}"/>
+                <apex:commandButton value="Display" action="{!Clickfordetails}"/>
+                <apex:outputText label="Output:" value="{!Output2}"></apex:outputText>
+            </apex:pageBlockSection>
+            <br/>
+            <apex:pageBlockSection collapsible="true" title="Product Details" columns="1">
+                <apex:inputText label="Product Name" value="{!ProductName}"/>
+                <apex:inputText label="Price" value="{!Price}"/>
+                <apex:inputText label="Quantity" value="{!Quantity}"/>
+                <apex:commandButton value="Display Product Details" action="{!ClickforResult}" />
+                <apex:outputText label="Output:" value="{!Output3}"></apex:outputText>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection collapsible="true" title="Movie Details" columns="1">
+                <apex:inputText label="Movie Name" value="{!MovieName}"/>
+                <apex:inputText label="Tikets Available" value="{!TiketsAvailable}"/>
+                <apex:inputText label="Show Timings" value="{!showtimings}"/>
+                <apex:commandButton value="Display Movie Details" action="{!ClickforTikets}" />
+                <apex:outputText label="Output:" value="{!Output4}"></apex:outputText>>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

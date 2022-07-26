@@ -1,0 +1,39 @@
+<aura:component controller="DynamicComboBox" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 <!--display static values in combobox
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'New', 'value': 'new'},
+    {'label': 'In Progress', 'value': 'inProgress'},
+    {'label': 'Finished', 'value': 'finished'}]"/>
+    <aura:attribute name="val" type="string"/>
+    <lightning:card title="ComboBox" iconName="action:flow">
+    <lightning:combobox name="progress" label="Status" placeholder="Select Progress" options="{! v.options}" onchange="{!c.changeValue}" value="{!v.val}"/>
+    </lightning:card>
+    -->
+    <aura:attribute name="accnums" type="list" default="[]"/>
+    <aura:attribute name="accrecord" type="list"/>
+    <aura:attribute name="anum" type="string"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card title="ComboBox" iconName="action:flow">
+        <div class="slds-var-p-around_small">
+        <lightning:combobox label="Account Number" options="{!v.accnums}" onchange="{!c.changeAccountNumber}" value="{!v.anum}"/>
+        </div><br/>
+        <div class="slds-var-p-around_small">
+            <table width="40%" border="1">
+                <tr>
+                    <th>AccountNumber</th>
+                    <th>Phone</th>
+                    <th>Industry</th>
+                    <th>Website</th>
+                </tr>
+                <aura:iteration items="{!v.accrecord}" var="al">
+                    <tr>
+                        <td>{!al.AccountNumber}</td>
+                        <td>{!al.Phone}</td>
+                        <td>{!al.Industry}</td>
+                        <td>{!al.Website}</td>
+                    </tr>
+                </aura:iteration>
+            </table>
+        </div>
+    </lightning:card>
+</aura:component>

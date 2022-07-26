@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Iterator"></lightning-card>
+    <template iterator:it={cmpNames}>
+        <h1 key={it.value}>{it.value}</h1>
+    </template>
+    <hr size="3" color="#ff0000"/>
+    <template for:each={cmpData} for:item="cd">
+        <div key={cd}>
+            <h1>{cd.CompanyName}&nbsp;&nbsp;{cd.Employees}&nbsp;&nbsp;{cd.Location}</h1>
+        </div>
+    </template>
+</template>

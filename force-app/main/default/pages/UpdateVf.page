@@ -1,0 +1,11 @@
+<apex:page controller="UpdateApi">
+    <apex:form >
+        <apex:pageBlock title="Update the record">
+            <center>
+            Employee Name <apex:inputText value="{!name1}"/><br/><br/>
+            Employee Salary <apex:inputText value="{!salary}"/><br/><br/>
+            Employee Status <apex:inputText value="{!status}"/><br/><br/>
+                <apex:commandButton value="Update the record" action="{!UpdateRecords}"/></center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

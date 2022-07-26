@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="firstName" type="String" access="Public" />
+    <aura:attribute name="lastName" type="String" access="Public" />
+    <aura:attribute name="fullname" type="String" access="Public" />
+    <lightning:card title="Welcome To My Page" iconName="utility:animal_and_nature">
+        <h1 class="slds-p-left_small">
+            Employee Details
+        </h1>
+        <div class="slds-p-left_small">
+            <lightning:input name="input1" placeholder="Please Enter Your First Name" label="First Name" value="{!v.firstName }" style="width:15rem"/>
+            <lightning:input name="input2" placeholder="Please Enter Your Last Name" label="Last Name" value="{!v.lastName }" style="width:15rem"/>
+            <lightning:button variant="success" label="Full Name" title="Success" onclick="{!c.myFullName }"/>
+            <br/><br/>
+        </div>
+        {!v.fullname}
+    </lightning:card>
+</aura:component>

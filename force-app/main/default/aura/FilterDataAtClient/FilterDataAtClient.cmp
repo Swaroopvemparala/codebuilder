@@ -1,0 +1,61 @@
+<aura:component controller="FilterDataClientClass" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="ename" type="string"/>
+    <aura:attribute name="genValue" type="string"/>
+    <aura:attribute name="genOption" type="List" default="[
+                                                          {'label':'Male', 'value':'male'}
+                                                          {'label':'Female', 'value':'female'}
+                                                          ]"/>
+    <aura:attribute name="minsal" type="decimal"/>
+    <aura:attribute name="maxsal" type="decimal"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute access="public" name="emplist" type="list"/>
+    <aura:attribute access="public" name="filteremplist" type="list"/>
+    <aura:attribute access="public" name="sts" type="boolean"/>
+    <aura:attribute access="public" name="msg" type="string"/>
+    <lightning:card title="Filter Data">
+    <div class="slds-var-p-around_small">
+        <table align="center" border="0" style="width:35rem">
+            <tr>
+                <td colspan="2"><lightning:input placeholder="Enter Name" value="{!v.ename}" style="width:15rem"/></td>
+                <td><lightning:button label="submit" variant="brand" onclick="{!c.displayonName}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><lightning:combobox placeholder="Select Gender" value="{!v.genValue}" options="{!v.genOption}"/></td>
+                <td><lightning:button label="submit" variant="brand" onclick="{!c.displayonGender}"/></td>
+            </tr>
+            <tr>
+                <td><lightning:input value="{!v.minsal}" style="width:15rem" placeholder="Enter minimum salary"/></td>
+                <td><lightning:input value="{!v.maxsal}" style="width:15rem" placeholder="Enter maximum salary"/></td>
+                <td><lightning:button label="submit" variant="brand" onclick="{!c.displayonSalary}"/></td>
+            </tr>
+        </table>
+    </div>
+        <div class="slds-var-p-around_small">
+            <aura:if isTrue="{!v.sts}">
+            <table>
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Salary</th>
+                    <th>Email</th>
+                    <th>Mobile no</th>
+                    <th>Gender</th>
+                </tr>
+                <aura:iteration items="{!v.emplist}" var="em">
+                    <tr>
+                        <td>{!em.Id}</td>
+                        <td>{!em.First_Name__c}</td>
+                        <td>{!em.salary__c}</td>
+                        <td>{!em.Email__c}</td>
+                        <td>{!em.Mobile__c}</td>
+                        <td>{!em.Gender__c}</td>
+                    </tr>
+                </aura:iteration>
+            </table>
+                <aura:set attribute="else">
+                    {!v.msg}
+                </aura:set>
+            </aura:if>
+        </div>
+		</lightning:card>
+</aura:component>

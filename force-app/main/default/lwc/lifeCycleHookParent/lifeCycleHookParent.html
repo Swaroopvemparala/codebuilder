@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Life Cycle Hook">
+        <div class="slds-p-around_medium">
+            <!-- <lightning-input label="Enter Name" style="width:15rem" onchange={changeHandler}></lightning-input> -->
+            <template if:false={status}>
+                <lightning-button label="ShowChild" variant="success" onclick={clickHandler}></lightning-button>
+            </template>
+            <template if:true={status}>
+                <lightning-button label="Removechild" variant="destructive" onclick={clickHandler}></lightning-button>
+            </template>
+            <br/>
+            <template if:true={status}>
+                <c-life-cycle-hook-child></c-life-cycle-hook-child>
+            </template>
+        </div>
+    </lightning-card>
+</template>

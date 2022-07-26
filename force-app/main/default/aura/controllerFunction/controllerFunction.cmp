@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:card title="Welcome To My Page" iconName="utility:animal_and_nature">
+        <h1 class="slds-p-left_small"></h1>
+        <center>
+            <br/>
+            <lightning:button variant="success" label="Full Name" title="Success" onclick="{!c.function1}"/>
+        </center>
+    </lightning:card>
+</aura:component>

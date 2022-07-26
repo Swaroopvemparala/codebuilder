@@ -1,0 +1,93 @@
+<apex:page >
+    <apex:form >
+        <style>
+            body{background-color:lightgrey}
+            td{color:Red;font-size:13px}
+            .cst{color:red;font-size:12px}
+            .lst{color:green;font-size:12px;background-color:white}
+            .gst{color:red !important;font-size:14px}
+            .sst{color:maroon !important;font-size:14px}
+        </style>
+        
+        <apex:pageBlock >
+            <table style="background-color:blue" width="100%" border="0">
+                <tr>
+                    <td align="center"><apex:image width="180px" height="150px"/></td></tr>
+            </table>
+            <br/>
+        </apex:pageBlock>
+        <apex:pageBlock >
+            <p align="left" style="color:black;font-size:13px"><u>User Form</u></p>
+            <br/>
+            
+            <table border="0" align="center" width="40%" bgcolor="lightyellow">
+                <tr>
+                    <td class="gst">Uname</td>
+                    <td><apex:inputText /></td>
+                </tr> 
+                <tr>
+                    <td class="gst">Password</td>
+                    <td><apex:inputSecret /></td>
+                </tr> 
+                <tr>
+                    <td class="gst">Resume</td>
+                    <td class="gst"><apex:inputFile value=""></apex:inputFile></td>
+                </tr> 
+                <tr>
+                    <td class="gst">Skills</td>
+                    <td style="color:Blue !important;font-size:13px">
+                        <apex:selectCheckboxes >
+                            <apex:selectOption itemLabel="Salesforce" itemValue="sf"/>
+                            <apex:selectOption itemLabel="Java" itemValue="java" />
+                            <apex:selectOption itemLabel="HTML" itemValue="html"/>
+                        </apex:selectCheckboxes>            
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gst">Address</td>
+                    <td><apex:inputTextarea cols="20" rows="3"/></td>
+                </tr>
+                <tr>
+                    <td class="gst">Gender</td>
+                    <td class="gst">
+                        <apex:selectRadio styleClass="gst">
+                            <apex:selectOption itemLabel="Male" itemValue="M" />
+                            <apex:selectOption itemLabel="Female" itemValue="F"/>
+                        </apex:selectRadio>            
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gst">Country</td>
+                    <td>
+                        <apex:selectList multiselect="false" size="1" styleClass="cst">
+                            <apex:selectOption itemLabel="India" itemValue="ind"/>
+                            <apex:selectOption itemLabel="England" itemValue="eng"/>
+                            <apex:selectOption itemLabel="U.S" itemValue="usa"/>
+                            <apex:selectOption itemLabel="Japan" itemValue="jpn"/>
+                        </apex:selectList>           
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gst">Languages</td>
+                    <td>
+                        <apex:selectList multiselect="true" size="5" styleClass="lst">
+                            <apex:selectOption itemLabel="English" itemValue="en"/>
+                            <apex:selectOption itemLabel="Hindi" itemValue="hn"/>
+                            <apex:selectOption itemLabel="Telugu" itemValue="tg"/>
+                            <apex:selectOption itemLabel="Kannada" itemValue="kn"/>
+                            <apex:selectOption itemLabel="Marathi" itemValue="mt"/>
+                            <apex:selectOption itemLabel="Punjabi" itemValue="pn"/>
+                        </apex:selectList>           
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <apex:commandButton value="Save"/>
+                        <apex:commandLink value="Quick Save"/>
+                        <apex:commandButton value="cancel"/>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageBlock> 
+    </apex:form>
+</apex:page>

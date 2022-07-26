@@ -1,0 +1,8 @@
+<apex:page controller="DeleteConnectedApi" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Delete record">
+            Employee Name<apex:inputText value="{!name}"/><br/><br/>
+        <apex:commandButton value="Delete Record" action="{!deleteRecord}"/>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

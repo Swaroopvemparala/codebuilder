@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Salary Calculation">
+        <lightning-input type="number" label="Basic Salary" style="width:15rem"></lightning-input><br/>
+            <lightning-checkbox-group name="alw"
+                              label="Choose Allowances"
+                              options={cbOptions}
+                              value={cbValue}
+                              onchange={buttonChangeHandler}>
+            </lightning-checkbox-group><br/>
+            <lightning-radio-group name="rdGroup"
+                          label="Choose salary type"
+                          options={rbOptions}
+                          value={rbValue}
+                          type="radio"
+                          onchange={radioChangeHandler}>
+            </lightning-radio-group><br/>
+            <lightning-button variant="brand" label="submit"></lightning-button>
+    </lightning-card>   
+</template>

@@ -1,0 +1,20 @@
+<apex:page controller="multiplepages" lightningStylesheets="true" docType="html-5.0">
+    <apex:form >
+        <apex:pageBlock title="ARMOR TECHSOL">
+            <apex:pageBlockSection title="PaySlip Details" collapsible="false" columns="2">
+                <apex:inputText value="{!DaysPaid}" label="Days Paid" style="border-radius:20px"/>
+                <apex:inputText value="{!IncomeTaxDeduction}" label="Income Tax Deduction" style="border-radius:20px"/>
+                <apex:inputText value="{!Insurancededuction}" label="Insurance deduction" style="border-radius:20px"/>
+                <apex:inputText value="{!OtherDecduction}" label="Other Decduction" style="border-radius:20px"/>
+                <apex:inputText value="{!LOP}" label="LOP" style="border-radius:20px"/>
+                <apex:inputText value="{!PerfomanceBonus}" label="Perfomance Bonus" style="border-radius:20px"/>
+                <centre>
+                <apex:commandButton value="Previous Page" action="{!PreviousPage1}"/>
+                </centre>
+                <centre>
+                <apex:commandButton value="Save" action="{!Submit}"/>
+                </centre>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+<aura:attribute name="countries" type="List" default="['India', 'Australia', 'France' , 'New Zeland', 'USA', 'UK']" access="public" />
+<aura:attribute name="city" type="Set" default="['Mumbai', 'Melbourne', 'Paris' , 'Chicago','Scotland']" access="public"/>     
+    <lightning:card title="Players and city" iconName="utility:animal_and_nature">
+    <div class="slds-p-around_medium">        
+        <ol class="slds-list_ordered">
+        <aura:iteration items="{!v.countries}" var="ct">
+            <li>{!ct}</li>
+            </aura:iteration>
+        </ol><br/> 
+        <ul class="slds-list_dotted">
+        <aura:iteration items="{!v.city}" var="cy">
+            <li>{!cy}</li>
+            </aura:iteration>
+        </ul> 
+        </div> 
+    </lightning:card>    
+</aura:component>

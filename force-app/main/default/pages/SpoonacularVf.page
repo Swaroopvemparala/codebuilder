@@ -1,0 +1,16 @@
+<apex:page controller="SpoonacularConsumer">
+    <apex:form >
+        <apex:pageBlock title="Search By Ingredients">
+            <apex:inputText value="{!name}"/>&nbsp;&nbsp;&nbsp;
+            <apex:commandButton value="search" action="{!searchIngredients}"/>
+            <br/><br/>
+            <center>
+            <apex:pageBlockTable value="{!sw}" var="s">
+                <apex:column value="{!s.Id}" headerValue="Id"/>
+                <apex:column value="{!s.Name}" headerValue="Name"/>
+                <apex:column value="{!s.Image}" headerValue="Image"></apex:column>
+            </apex:pageBlockTable>
+                </center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

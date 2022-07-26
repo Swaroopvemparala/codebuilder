@@ -1,0 +1,20 @@
+<apex:page controller="filtrationclass">
+    <apex:form >
+        <apex:pageBlock title="EmployeeRecords" tabStyle="Employee__c">
+            <center>
+                Employee Name&nbsp;&nbsp;<apex:inputText value="{!enm}"/>&nbsp;&nbsp;
+            	Mobile number&nbsp;&nbsp;<apex:inputText value="{!mbo}"/>&nbsp;&nbsp;
+                Email Id&nbsp;&nbsp;<apex:inputText value="{!eml}"/>&nbsp;&nbsp;
+                <apex:commandButton value="select record" action="{!displayRecords}"/>
+                <br/><br/>
+                <apex:pageBlockTable value="{!dem}" var="e">
+                    <apex:column value="{!e.Id}"/>
+                    <apex:column value="{!e.Name}"/>
+                    <apex:column value="{!e.First_Name__c}"/>
+                    <apex:column value="{!e.Mobile__c}"/>
+                    <apex:column value="{!e.Email__c}"/>
+                </apex:pageBlockTable>
+            </center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

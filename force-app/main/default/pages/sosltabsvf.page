@@ -1,0 +1,24 @@
+<apex:page controller="sosltabs" lightningStylesheets="true">
+    <apex:pageBlock title="Records">
+        <apex:pageBlockSection title="Enter details">
+            <apex:form >
+                Enter Name: <apex:inputtext value="{!input1}" label="Enter character"  /><br/>
+                <apex:commandButton action="{!method1}" value="Search"/>
+            </apex:form>
+            <center><apex:tabPanel >
+                <apex:tab label="Account tab">
+                    <apex:pageBlockTable title="Accounts" value="{!dispacc}" var="da">
+                        <apex:column value="{!da.name}"/>
+                        <apex:column value="{!da.phone}"/>
+            </apex:pageBlockTable>
+                </apex:tab>
+                <apex:tab label="opportunity tab">
+                    <apex:pageBlockTable title="Opportunities" value="{!dispopp}" var="do">
+                        <apex:column value="{!do.name}"/>
+                        <apex:column value="{!do.amount}"/>
+            </apex:pageBlockTable>
+                </apex:tab>
+            </apex:tabPanel></center>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

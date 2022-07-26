@@ -1,0 +1,24 @@
+<apex:page standardController="lead">
+    <apex:form >
+        <apex:pageBlock title="lead OutputValues">
+            <apex:pageBlockSection collapsible="true" columns="1" title="Line-1">
+                <apex:outputText value="{!Lead.Company}"></apex:outputText>
+                <apex:outputText value="{!Lead.Email}"></apex:outputText>
+                <apex:outputText value="{!Lead.Industry}"></apex:outputText>
+                <apex:outputText value="{!Lead.Status}"></apex:outputText>
+                <apex:outputText value="{!Lead.Phone}"></apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <br/>
+        <apex:pageBlock title="lead Inputvalues">
+            <apex:pageBlockSection collapsible="true" columns="1" title="Line-2">
+                <apex:inputField value="{!Lead.Company}"/>
+                <apex:inputField value="{!Lead.LastName}"/>
+                <apex:inputField value="{!Lead.Status}"/>
+                <apex:inputField value="{!Lead.LeadSource}"/>
+                <apex:inputField value="{!Lead.Phone}"/>
+                <apex:commandButton action="{!save}" value="save"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

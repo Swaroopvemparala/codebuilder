@@ -1,0 +1,21 @@
+<apex:page controller="multiplepages" lightningStylesheets="true" docType="html-5.0">
+    <apex:form >
+        <apex:pageBlock title="ARMOR TECHSOL">
+            <apex:pageBlockSection title="Salary Record" collapsible="false" columns="2">
+                <apex:inputText value="{!BasicSalary}" label="Basic Salary" style="border-radius:20px"/>
+                <apex:inputText value="{!BasketAllowances}" label="Basket Allowances" style="border-radius:20px"/>
+                <apex:inputText value="{!PerformanceBonus}" label="Performance Bonus" style="border-radius:20px"/>
+                <apex:inputText value="{!SpecialAllownaces}" label="Special Allownaces" style="border-radius:20px"/>
+                <apex:input type="date" value="{!StartDate}" label="Start Date" style="border-radius:20px"/>
+                <apex:input type="date" value="{!EndDate}" label="End Date" style="border-radius:20px"/>
+                <centre>
+                <apex:commandButton value="Previous page" action="{!PreviousPage}"/>
+                </centre>
+                <br/>
+                <centre>
+                <apex:commandButton value="Next page" action="{!NextPage1}"/>
+                </centre>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

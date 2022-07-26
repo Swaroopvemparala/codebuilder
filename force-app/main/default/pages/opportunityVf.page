@@ -1,0 +1,24 @@
+<apex:page standardController="Opportunity" >
+    <apex:form >
+        <apex:pageBlock title="Opportunity OutputValues">
+            <apex:pageBlockSection collapsible="true" columns="1" title="Line-1">
+                <apex:outputText value="{!Opportunity.Amount}"></apex:outputText>
+                <apex:outputText value="{!Opportunity.CloseDate}"></apex:outputText>
+                <apex:outputText value="{!Opportunity.Description}"></apex:outputText>
+                <apex:outputText value="{!Opportunity.LeadSource}"></apex:outputText>
+                <apex:outputText value="{!Opportunity.Name}"></apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <br/>
+        <apex:pageBlock title="Opportunity Inputvalues">
+            <apex:pageBlockSection collapsible="true" columns="1" title="Line-2">
+                <apex:inputField value="{!Opportunity.Name}"/>
+                <apex:inputField value="{!Opportunity.CloseDate}"/>
+                <apex:inputField value="{!Opportunity.LeadSource}"/>
+                <apex:inputField value="{!Opportunity.OrderNumber__c}"/>
+                <apex:inputField value="{!Opportunity.StageName}"/>
+                <apex:commandButton action="{!save}" value="save"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

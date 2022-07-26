@@ -1,0 +1,15 @@
+<apex:page controller="PraticeApi" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Get Account Records">
+            <apex:commandButton value="Get Records" action="{!displayResult}"/><br/><br/>
+            <center><apex:pageBlockTable value="{!acc}" var="a">
+                <apex:column value="{!a.Id}" headerValue="Id"/>
+                <apex:column value="{!a.Name}" headerValue="Name"/>
+                <apex:column value="{!a.Phone}" headerValue="Phone"/>
+                <apex:column value="{!a.AccountNumber}" headerValue="Account Number"/>
+                <apex:column value="{!a.Industry}" headerValue="Industry"/>
+                <apex:column value="{!a.AnnualRevenue}" headerValue="Annual Revenue"/>
+                </apex:pageBlockTable></center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

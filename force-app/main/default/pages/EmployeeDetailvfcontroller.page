@@ -1,0 +1,36 @@
+<apex:page controller="EmployeeDetailvfcontroller" lightningStylesheets="true" sidebar="false" showHeader="false" >
+    <apex:form >
+        <apex:pageBlock title="Display Records Without Input">
+            <apex:pageBlockTable value="{!lstval}" var="a">
+                <apex:column value="{!a.Name}"/>
+                <apex:column value="{!a.FirstName__c}"/>
+                <apex:column value="{!a.Salutation__c}"/>
+                <apex:column value="{!a.Employee_ID__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <br/>
+        <apex:pageBlock title="Display Records With Button">
+            <apex:commandButton action="{!DisplayButton}" value="Display Records" />
+            <apex:pageBlockTable value="{!lstval1}" var="a">
+                <apex:column value="{!a.Name}"/>
+                <apex:column value="{!a.FirstName__c}"/>
+                <apex:column value="{!a.Salutation__c}"/>
+                <apex:column value="{!a.Employee_ID__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <br/>
+        <apex:pageBlock title="Display Records with Input">
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockSection >
+                <apex:inputText value="{!inputName}" label="Name"/>
+            </apex:pageBlockSection>
+            <apex:commandButton action="{!displaywithInput}" value="Display Records"/>
+            <apex:pageBlockTable value="{!lstval2}" var="a">
+                <apex:column value="{!a.Name}"/>
+                <apex:column value="{!a.FirstName__c}"/>
+                <apex:column value="{!a.Salutation__c}"/>
+                <apex:column value="{!a.Employee_ID__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

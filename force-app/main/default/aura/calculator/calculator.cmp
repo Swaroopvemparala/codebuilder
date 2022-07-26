@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	  <aura:attribute name="fno" type="Integer" access="Public" />
+    <aura:attribute name="sno" type="Integer" access="Public" />
+    <aura:attribute name="result" type="Integer" access="Public" />
+    <lightning:card title="Calculator" iconName="utility:animal_and_nature">
+        <h1 class="slds-p-left_small">
+            Arithmetic Operation
+        </h1>
+        <div class="slds-p-left_small">
+            <lightning:input name="input1" placeholder="Please Enter Your First Number" label="First Number" value="{!v.fno}" style="width:15rem"/>
+            <lightning:input name="input2" placeholder="Please Enter Your Second Name" label="Second Number" value="{!v.sno}" style="width:15rem"/>
+            <lightning:button variant="success" label="Add" onclick="{!c.addition }"/>
+            <lightning:button variant="brand" label="Sub" onclick="{!c.Substraction }"/>
+            <lightning:button variant="destructive" label="Mul" onclick="{!c.Multiplication }"/>
+            <br/><br/>
+        </div>
+        {!v.result}
+    </lightning:card>
+</aura:component>

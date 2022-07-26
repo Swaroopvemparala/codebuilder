@@ -1,0 +1,13 @@
+<apex:page controller="CustomPppd" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Post,Patch,Put,Delete">
+            Employee Name: <apex:inputText value="{!Empname}"/>
+            Gender: <apex:inputText value="{!Gender}"/>
+            Mobile: <apex:inputText value="{!Mobile}"/><br/><br/>
+            <apex:commandButton value="Insert Record" action="{!insertRecord}"/><br/><br/>
+            <apex:commandButton value="Update Record" action="{!updateRecord}"/><br/><br/>
+            <apex:commandButton value="Upsert Record" action="{!upsertRecord}"/><br/><br/>
+            <apex:commandButton value="Delete Record" action="{!deleteRecord}"/>            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

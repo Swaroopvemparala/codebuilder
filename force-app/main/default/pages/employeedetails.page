@@ -1,0 +1,23 @@
+<apex:page controller="multiplepages" lightningStylesheets="true" docType="html-5.0">
+    <apex:form >
+        <apex:pageBlock title="ARMOR TECHSOL">
+            <apex:pageBlockSection title="Employee Details" collapsible="false" columns="2">
+                <apex:selectList label="Salutation" size="1" value="{!salutation1}" style="border-radius:20px">
+                    <apex:selectOptions value="{!salutations}"/>
+                </apex:selectList>
+                <apex:inputText value="{!FirstName}" label="First Name" html-placeholder="Enter First Name" style="border-radius:20px"/>
+                <apex:inputText value="{!LastName}" label="Last Name" html-placeholder="Enter Last Name" style="border-radius:20px"/>
+                <apex:selectList label="Department" size="1" value="{!Department}" style="border-radius:20px">
+                    <apex:selectOptions value="{!Departments}"></apex:selectOptions>
+                </apex:selectList>
+                <apex:selectList label="Designation" size="1" value="{!designation}" style="border-radius:20px">
+                    <apex:selectOptions value="{!Designations}"></apex:selectOptions>
+                </apex:selectList>
+                <apex:inputCheckbox value="{!ActiveStatus}" label="Active Status"/>
+                <centre>
+                <apex:commandButton value="Next Page" action="{!NextPage}"/>
+                </centre>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

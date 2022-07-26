@@ -1,0 +1,24 @@
+<apex:page standardController="Account">
+      <apex:form >
+        <apex:pageBlock title="Account outputValues">
+            <apex:pageBlockSection collapsible="true" columns="1" title="Line-1">
+                <apex:outputText value="{!account.Name}"></apex:outputText>
+                <apex:outputText value="{!account.Industry}"></apex:outputText>
+                <apex:outputText value="{!account.AccountNumber}"></apex:outputText>
+                <apex:outputText value="{!account.AnnualRevenue}"></apex:outputText>
+                <apex:outputText value="{!account.Rating}"></apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <br/>
+        <apex:pageBlock title="Account Inputvalues">
+            <apex:pageBlockSection collapsible="true" columns="1" title="Line-2">
+                <apex:inputField value="{!account.Name}"/>
+                <apex:inputField value="{!account.Industry}"/>
+                <apex:inputField value="{!account.Phone}"/>
+                <apex:inputField value="{!account.Rating}"/>
+                <apex:inputField value="{!account.SLAExpirationDate__c}"/>
+                <apex:commandButton action="{!save}" value="save"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

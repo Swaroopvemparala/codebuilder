@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Connect LWC with apex imperatively" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <lightning-input style="width:15rem" label="Account Name" onchange={changeHandlerName}></lightning-input>
+            <br/>
+            <lightning-input style="width:15rem" label="Annual Revenue" type="number" onchange={changeHandlerPhone}></lightning-input>
+            <br/><br/>
+            <lightning-button label="Display" variant="success" onclick={clickHandler}></lightning-button>
+            <template if:true={actDataStatus}>
+                <template for:each={actData} for:item="acc">
+                    <p key={acc.Id} style="color:green;font-size:18px">
+                    {acc.Name}&nbsp;&nbsp;&nbsp;
+                    {acc.Phone}&nbsp;&nbsp;&nbsp;
+                    {acc.Industry}&nbsp;&nbsp;&nbsp;
+                    {acc.AnnualRevenue}&nbsp;&nbsp;&nbsp;
+                </p>
+                </template>
+            </template>
+            <template if:true={actErrStatus}>
+                <p style="color:red;font-size:15px">Sorry no record found</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="fnm" type="String"/>
+    <aura:attribute name="lnm" type="String"/>
+    <aura:attribute name="fullNm" type="String"/>
+    <lightning:card title="P2C Parent" iconName="standard:budget">
+        <div class="slds-p-left_medium" style="color:red;font-size:20px"> 
+            <lightning:input style="width:15rem" label="First Name" value="{!v.fnm}"/>
+            <lightning:input style="width:15rem" label="Last Name" value="{!v.lnm}"/>
+            <br/>
+            <lightning:button variant="brand" label="Submit" onclick="{!c.sendData}"/>
+        </div>
+        <c:p2cChild chValue1="{!v.fullNm}" chValue2="{!v.fnm}" chValue3="{!v.lnm}"/>
+    </lightning:card>
+</aura:component>

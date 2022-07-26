@@ -1,0 +1,11 @@
+<apex:page controller="PostConnectedApi" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Account Details">
+            <apex:commandButton value="Get Records" action="{!postco}"/>
+            <center><apex:pageBlockTable value="{!acc}" var="c">
+                <apex:column value="{!c.Name}" headervalue="Name"/>
+                <apex:column value="{!c.AccountNumber}" headervalue="AccountNumber"/>
+                </apex:pageBlockTable></center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

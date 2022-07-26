@@ -1,0 +1,7 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageBlock title="Output Values">
+            ="">
+        </apex:pageBlock>
+    </apex:form>>
+</apex:page>

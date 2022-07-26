@@ -1,0 +1,20 @@
+<apex:page controller="sosl" lightningStylesheets="true">
+    <apex:form >
+        <apex:inputText value="{!searchStr}"/>
+        <apex:commandButton value="Get SOSL Result" action="{!Search}"/>
+        <br/>
+        <br/>
+        <apex:pageBlock title="Accounts">
+            <apex:pageblockTable value="{!accList }" var="acc">
+                <apex:column value="{!acc.name}"/>
+                <apex:column value="{!acc.Type}"/>
+            </apex:pageblockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Contacts">
+            <apex:pageblockTable value="{!conList}" var="con">
+                <apex:column value="{!con.name}"/>
+                <apex:column value="{!con.email}"/>
+            </apex:pageblockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

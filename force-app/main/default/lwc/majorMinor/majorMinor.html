@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Major or Minor"></lightning-card>
+        <lightning-input type="text" label="Enter age" style="width:15rem" onchange={changeAge}></lightning-input>
+            <template if:true={status}>
+            <h1>You are a major and your age is: {age} </h1><br/>
+        </template>
+        <template if:false={flag}>
+            <template if:false={status}>
+                <h1>You are a minor and your age is: {age}</h1><br/>
+            </template>
+        </template>     
+</template>

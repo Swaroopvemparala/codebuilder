@@ -1,0 +1,75 @@
+<apex:page controller="PayslipVF" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Saving a Record">
+            <apex:tabPanel switchType="ajax" selectedTab="{!currentTab}">
+            <apex:tab label="Employee Detail" disabled="{!currentTab<>'1'}">
+            <apex:pageBlockSection title="Employee Detail Field" collapsible="true" columns="2">
+                <apex:inputField value="{!e.Salutation__c}"/>
+                     <apex:inputField value="{!e.FirstName__c}"/>
+                          <apex:inputField value="{!e.Middle_Name__c}"/>
+                               <apex:inputField value="{!e.Name}"/>
+                                    <apex:inputField value="{!e.Employee_Name__c}"/>
+                                         <apex:inputField value="{!e.Date_of_birth__c}"/>
+                                              <apex:inputField value="{!e.Age__c}"/>
+                                                   <apex:inputField value="{!e.Address__c}"/>
+                <apex:inputField value="{!e.Passport_Number__c}"/>
+                <apex:inputField value="{!e.Email_ID__c}"/>
+                <apex:inputField value="{!e.Phone_Num__c}"/>
+                <apex:inputField value="{!e.Gender__c}"/>
+                <apex:inputField value="{!e.Marital_Status__c}"/>
+                <apex:inputField value="{!e.Aadhar_Number__c}"/>
+                <apex:inputField value="{!e.Employee_ID__c}"/>
+                <apex:inputField value="{!e.Designation__c}"/>
+                <apex:inputField value="{!e.Date_of_Joining__c}"/>
+                <apex:inputField value="{!e.End_Date__c}"/>
+                <apex:inputField value="{!e.Active_status__c}"/>
+                <apex:inputField value="{!e.Bank_Name__c}"/>
+                <apex:inputField value="{!e.IFSC_Code__c}"/>
+                <apex:inputField value="{!e.PAN_Number__c}"/>
+                <apex:inputField value="{!e.PF_Number__c}"/>
+                <apex:inputField value="{!e.UAN_Number__c}"/>
+                <centre>
+                <apex:commandButton value="Next" action="{!Next}"/>
+                </centre>
+            </apex:pageBlockSection>
+            </apex:tab>
+            <br/>
+           <apex:tab label="Salary Detail" disabled="{!currentTab<>'2'}">
+                <apex:pageBlockSection title="Salary Details Field">
+                <apex:inputField value="{!s.Retention_bonus__c}"/>
+                    <apex:inputField value="{!s.Basic_Salary__c}"/>
+                    <apex:inputField value="{!s.Start_date__c}"/>
+                    <apex:inputField value="{!s.End_date__c}"/>
+                    <apex:inputField value="{!s.Monthly_Gross__c}"/>
+                    <apex:inputField value="{!s.EPF__c}"/>
+                    <br/>
+                    <centre>
+                    <apex:commandButton value="Previous" action="{!Previous}"/>
+                    </centre>
+                    <centre>
+                    <apex:commandButton value="Next" action="{!Next}"/>
+                    </centre>
+            </apex:pageBlockSection>
+            </apex:tab>
+                <br/>
+                <apex:tab label="PaySlip Detail" disabled="{!currentTab<>'3'}">
+                <apex:pageBlockSection title="PaySlip Details Field">
+                <apex:inputField value="{!p.Basic__c}"/>
+                    <apex:inputField value="{!p.Days_paid__c}"/>
+                    <apex:inputField value="{!p.Start_date__c}"/>
+                    <apex:inputField value="{!p.End_date__c}"/>
+                    <apex:inputField value="{!p.HRA__c}"/>
+                    <apex:inputField value="{!p.Days_paid__c}"/>
+                    <centre>
+                        <apex:commandButton value="Previous" action="{!Previous}"/>
+                    </centre>
+                    <centre>
+                            <apex:commandButton value="Save" action="{!Save}"/>
+                    </centre>
+                    <br/>
+            </apex:pageBlockSection>
+                </apex:tab>
+                </apex:tabPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
